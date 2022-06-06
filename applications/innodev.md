@@ -72,11 +72,11 @@ We see Helium as a global telecommunication carrier, and definitely the future n
  
 * What is your approximate price point? 
  
-The approximate price point is 850 Euro ex. VAT.
+The approximate price point is 600 Euro ex. VAT.
 
 * Detailed hardware designs, including relevant parts?
  
-The gateway design is based on the Raspberry Pi Compute Module 4 (CM4), SX1303 and SX1250 radio chipsets, ATECC608B and DS28C36 for encryption of the swarm_key.
+The Light Hotspot design is based on the Raspberry Pi Compute Module 4 (CM4), SX1303 and SX1250 radio chipsets, ATECC608B for encryption of the swarm_key.
  
 * Evidence of a functioning prototype - photos, videos. 
  
@@ -88,13 +88,13 @@ Please see below the Software and System Upgrade chapters.
  
 * What is your expected production and delivery timeline?
  
-We expect to deliver the first prototype for audit in September. Production is expected to start by December. Please see more details in  "Production and delivery timeline" chapter
+We expect to deliver the first prototype for audit in September. Production is expected to start by August. Please see more details in  "Production and delivery timeline" chapter
  
  
 Below are more details regarding our answers.
  
  
-We are building a special Helium gateway. We are naming it TERRANIUM. Our main focus is on its outdoor characteristics and security.
+We are building a Helium Light Hotspot. We are naming it TERRANIUM. Our main focus is on its outdoor characteristics and security.
  
  
 ### Current status
@@ -105,25 +105,25 @@ We are building a special Helium gateway. We are naming it TERRANIUM. Our main f
  
 **Hardware design** - schematics, PCB, enclosure - **Done**
  
-**Firmware** - Partially done
+**Firmware** - **Done**
  
  
  - Configuration and troubleshooting UI – **Done** 
  
- - Integration with Helium app (Android/iOS) - **Ongoing**
+ - Innodev Makers app (Android/iOS) - **Ongoing**
  
- - Other software modules (enclosure thermal management and protection, light signaling drivers) – **Ongoing**
+ - Other software modules (enclosure thermal management and protection, light signaling drivers) – **Done**
  
- **Prototyping** - **Ongoing**
+ **Prototyping** - **Done**
  
  
- - RF Modules mPCIe - PCB manufactured 
+ - RF Modules mPCIe - **Done** 
  
 ![Figure2 - LWTERR-RF - Bottom](http://innodev.ro/wp/terranium_img/pcb-1.jpeg)![Figure2 - LWTERR-RF - Top](http://innodev.ro/wp/terranium_img/pcb-2.jpeg)
  
  **Figure 2 - RF modules PCB**
  
- - Enclosure - **Ongoing**
+ - Enclosure - **Done**
  
 ![Enclosure 1](http://innodev.ro/wp/terranium_img/enc_v.jpeg) ![Enclosure 2](http://innodev.ro/wp/terranium_img/enc_h.jpeg)
  
@@ -134,7 +134,7 @@ We are building a special Helium gateway. We are naming it TERRANIUM. Our main f
  
  
 ### Estimated Price point
-Estimated price is 850 Euro ex. VAT being dedicated for special outdoor conditions
+Estimated price is 600 Euro ex. VAT being dedicated for special outdoor conditions
  
  
 ### Functionalities
@@ -176,7 +176,7 @@ The software is composed from the following main modules:
 -   Helium miner – docker
 -   Mainboard aux kernel and service modules – thermal management, RGB LED control, ECC chip, all via I2C
 -   Management interface using Django with docker
--   The Helium configuration application (/gateway-config) to support communication with the Helium Hotspot App
+-   The Helium configuration application (/gateway-config) to support communication with the Innodev Hotspot App
  
 ![enter image description here](http://www.innodev.ro/wp/terranium_img/webapp.png)
  
@@ -198,10 +198,10 @@ The gateway will permit the following upgrade methods:
  
  
 The device configuration is aggregated in a single .conf type file. Via web interface, the user can save a backup of the file or upload a backup one.
-For the reset to factory default procedure the user will have a special configured BLE beacon only for that device, that should be placed nearby. After a power-on, if the device will detect this beacon nearby (3-5m radius) in no more than 1 minute after boot, it will initialize the factory reset procedure. This BLE beacon will be delivered with the device or if it is lost can be acquired separately from Innodev. As we specified earlier, the gateway is designed to work outdoors, mostly installed to 3 or more meters high. Using this procedure, we avoid adding a physical button on the enclosure for security and environment protection reasons. Users should also avoid open enclosure, being sealed and filled with thermal conducting liquid. Another reason is an operational one. Being installed most probably in a high position, the user could just power-off and power-on the device by disconnecting the ethernet cable, and place the beacon in the device proximity. The device status and reset procedure will be signalized by the LED light color and blinking of the bottom cap.
+As we specified earlier, the gateway is designed to work outdoors, mostly installed to 3 or more meters high. Users should also avoid open enclosure, being sealed and filled with thermal conducting liquid. Another reason is an operational one. Being installed most probably in a high position, the user could just power-off and power-on the device by disconnecting the ethernet cable, and place the beacon in the device proximity. The device status and reset procedure will be signalized by the LED light color and blinking of the bottom cap.
 ### Production and delivery timeline
-1.  Prototypes – 10pcs of full functioning prototypes will be produced until September, and two of them will be sent to Helium for certification proposed
-2.  First batch – 100pcs until December depending of Helium certification duration, using our own resource, and not relying on pre orders
+1.  Prototypes – 10pcs of full functioning prototypes are produced, and two of them will be sent to Helium for certification
+2.  First batch – 100pcs until September depending of Helium certification duration, using our own resource, and not relying on pre orders
 3.  We estimate that we can produce one batch each 3 months starting with 200+ devices/batch but this figure can be increased depending of orders and component availability
 See Figure 1
  
@@ -250,7 +250,8 @@ Our product will be ISO 9001:2015 Quality management standard compiled. We will 
 The warranty will be for 1 year with the possibility to be extended. In the warranty period, our first option will be the replacement. The repairing procedures will be done by Innodev. User will send the equipment to our service office for this procedure. Due to the fact that all electronic modules will be immersed in a liquid, the repairing procedure requires special tools and skills.
  
  
-For the replacement and repair, where is possible we will move the ECC chip to the new device so the user will keep the same swarm key and device settings
+For the replacement and repair, the RaspberryPi Compute Module and the mPCIE radio board offer flexible and fast repair time.
+When needed (main board damage) and posible, we will move the ECC chip to the new device so the user will keep the same swarm key and device settings
  
  
 As part of the European Union we can ensure fast delivery time to all EU countries without any delays due to custom clearance, both for initial purchases and also for service returns.
@@ -260,9 +261,9 @@ As part of the European Union we can ensure fast delivery time to all EU countri
  
 * Encrypted/locked-down firmware
  
-The firmware will be locked-down to the serial number of the processor. The data will be encrypted
+The firmware will be locked-down to the serial number of the processor. The data will be encrypted as use BalenaOS
  
-* Encrypted storage of the miner swarm_key, either via disk encryption or hardware measures like an ECC chip
+* Encrypted storage of the miner swarm_key, using the ATECC608B ECC chip
  
 Swarm key and data encryption key will be stored in the ECC chip.
  
@@ -278,28 +279,15 @@ We plan on submitting the prototype for auding in September.
 Below are more details regarding our answers.
  
  
-The hardware root of trust of the gateway is an ECC-P256 chip. This is a secure authenticator, compliant ECDSA, to ensure signature generation and verification to support a bidirectional asymmetric key authentication model.
+The hardware root of trust of the gateway is an ATECC608B chip. This is a secure authenticator, compliant ECDSA, to ensure signature generation and verification to support a bidirectional asymmetric key authentication model.
 The swarm_key files are stored in the ECC chip to ensure the highest grade of security.
  
  
 In order to mitigate the scarcity of the ECC608 chips the board is designed to accommodate 2 different ECC chips from 2 different manufacturers. The software contains drivers for both chips.
  
- 
-To ensure the security of the swarm_key they will be stored in a cold storage. Swarm_keys are written to the device in a completely isolated zone (no internet or LAN access). Each device uses a different pair of asymmetric keys. This ensures that if one device encryption key is compromised no other device is affected.
- 
- 
 The firmware is locked-down to the serial number of the raspberry-pi and to the ECC encryption key. In case of failure of the raspberry pi compute module the gateway will have to be sent in for service to generate new encryption keys.
  
- 
-The random number generator built in the ECC chip is used to generate the nonce required to prevent man-in-the-middle attacks.
- 
- 
-The software is secured by an internal firewall.
- 
- 
-Several security scripts will run at boot time and during run to ensure that the device is protected from known malware/botnets and detect new ones by monitoring the anomalies and changes in the day to day functionality.
- 
- 
+
 Filesystem and data are encrypted (AES-256).
 The communication channels are encrypted using OpenSSL.
 Tampering attempts will be detected by measuring the right cooling liquid level and temperature of those 3 sensors.
@@ -309,7 +297,7 @@ Tampering attempts will be detected by measuring the right cooling liquid level 
  
 * Which security (swarm) element are you using?
  
-We use a ECC chip as security element.
+We use the ATECC608B chip as security element.
  
 * Which LoRa chipset are you planning to use in your gateway?
  
@@ -328,7 +316,7 @@ Below are more details regarding our answers.
  
  
 **Security element**
-An ECC608 chip is used to securely store the swarm_key. The board supports 2 different ECC chips from 2 different manufactures: ATECC608B and DS28C36
+An ATECC608B chip is used to securely store the swarm_key. The board supports 2 different ECC chips from 2 different manufactures: ATECC608B and DS28C36
  
 **LoRa module**
 LoRa module is designed and produced by us. It is a mPCIe module, and uses SPI and GIO for communication. We use the SX1303 & SX1250 in order to take advantage of the Fine Timestamp capability of this chipset and implement higher accuracy location services in the future. This mPCIe radio module is designed by us, and produced in factories in China and, as backup,  Germany. There are other LoRa mPCIe modules on the market but we prefer to produce our own, in order to decrease the dependency from other partners and avoid procurement risks. We can produce RF modules as much as we need according to the orders. Components for it will be procured from different distribution partners from the UK, Romania and China.
