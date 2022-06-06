@@ -104,10 +104,20 @@ We are building a Helium Light Hotspot. We are naming it TERRANIUM. Our main foc
 **Figure 1. Milestones and status**
  
 **Hardware design** - schematics, PCB, enclosure - **Done**
-![Figure 2 - LWTERR-MB - Top](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/LWTERR-MB%20-%20front.jpeg)![Figure 3 - LWTERR-MB - Bottom](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/LWTERR-MB%20-%20back.jpeg)
+
+![Figure 2 - LWTERR-MB - Top](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/LWTERR-MB%20-%20front.jpeg)
+
+**Figure 2. LWTERR-MB - Top**
+
+![Figure 3 - LWTERR-MB - Bottom](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/LWTERR-MB%20-%20back.jpeg)
+
+**Figure 3. LWTERR-MB - Bottom**
+
 ![Figure 4 - LWTERR-MB - Top with CM4](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/LWTERR-MB%20-%20CM4.jpeg)
+
+**Figure 4. LWTERR-MB - Top with CM4**
  
-**Firmware** - **Done**
+ **Firmware** - **Done**
  
  
  - Configuration and troubleshooting UI – **Done** 
@@ -123,13 +133,17 @@ We are building a Helium Light Hotspot. We are naming it TERRANIUM. Our main foc
  
 ![Figure2 - LWTERR-RF - Bottom](http://innodev.ro/wp/terranium_img/pcb-1.jpeg)![Figure2 - LWTERR-RF - Top](http://innodev.ro/wp/terranium_img/pcb-2.jpeg)
  
- **Figure 2 - RF modules PCB**
+ **Figure 5 - RF modules PCB**
  
  - Enclosure - **Done**
  
-![Enclosure 1](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Terranium%20box.jpeg) ![Enclosure 2](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Case%202.jpeg)
+![Enclosure 1](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Terranium%20box.jpeg) 
+
+ **Figure 6 - Terranium packed for shipping**
+
+![Enclosure 2](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Case%202.jpeg)
  
-**Figure 3 - Enclosure**
+**Figure 7 - Enclosure**
  
  
  - Assembly line facility – **Ongoing** - we have our own new warehouse that will be prepared for device final assembling, automated testing and packaging.
@@ -158,14 +172,14 @@ Some of the key features of this device are:
 The device is composed from the following main modules:
  
  
-1.  RF module - Innodev LWTERR-RF which is our own made mPCIe Lora module around Semtech SX1303 chip
+1.  RF module - Innodev LWTERR-RF which is our own made mPCIe Lora module around Semtech SX1303 chip. However for initial lower volumes we will use the mPCIe Lora module from a different manufacturer (same Semtech SX1303 design)
 2.  Mainboard – Innodev LWTERR-MB that contains all other power, security, thermal management, communication, gps and security components
 3.  Raspberry PI ComputeModule 4 with BLE and EMMC memory. In the future for the next revision we plan to develop our own module using ARM or RISC V cpu.
 4.  Enclosure – sealed aluminum enclosure with IP68 RJ48 and N-type connectors including internal cooling liquid
  
 ![High Level Design](http://www.innodev.ro/wp/terranium_img/hla.png)
  
-**Figure 4 - High Level Architecture**
+**Figure 8 - High Level Architecture**
  
 ### Electronic Modules
 -   RF module – LWTERR-RF
@@ -182,7 +196,7 @@ The software is composed from the following main modules:
  
 ![FigureConfigWeb](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Internal%20WEB%20config%20app.JPG)
  
-**Figure 5 - Internal WEB configuration app**
+**Figure 9 - Internal WEB configuration app**
  
  
 **System upgrade**
@@ -311,7 +325,7 @@ Our supplier are located in UK, European Union and China.
  
 * How many radio modules/ concentrators can you procure?
  
-We can procure at least 1000 SX1303 and SX1250.
+We can procure at least 1000 SX1303 and SX1250 mPCIe modules.
  
  
 Below are more details regarding our answers.
@@ -321,7 +335,8 @@ Below are more details regarding our answers.
 An ATECC608B chip is used to securely store the swarm_key. The board supports 2 different ECC chips from 2 different manufactures: ATECC608B and DS28C36
  
 **LoRa module**
-LoRa module is designed and produced by us. It is a mPCIe module, and uses SPI and GIO for communication. We use the SX1303 & SX1250 in order to take advantage of the Fine Timestamp capability of this chipset and implement higher accuracy location services in the future. This mPCIe radio module is designed by us, and produced in factories in China and, as backup,  Germany. There are other LoRa mPCIe modules on the market but we prefer to produce our own, in order to decrease the dependency from other partners and avoid procurement risks. We can produce RF modules as much as we need according to the orders. Components for it will be procured from different distribution partners from the UK, Romania and China.
+We will use the mPCIe module reference design by Semtech. We will aquire the already built module from a supplier based in Germany.
+When we will increase the yearly production we will start using the LoRa module designed and produced by us. It is a mPCIe module, and uses SPI and GIO for communication. We use the SX1303 & SX1250 in order to take advantage of the Fine Timestamp capability of this chipset and implement higher accuracy location services in the future. This mPCIe radio module is designed by us, and produced in factories in China and, as backup,  Germany. There are other LoRa mPCIe modules on the market but we prefer to produce our own, in order to decrease the dependency from other partners and avoid procurement risks. We can produce RF modules as much as we need according to the orders. Components for it will be procured from different distribution partners from the UK, Romania and China.
  
  
 **CPU Module**
@@ -341,7 +356,7 @@ Mechanical processing will be made in Romania by a specialized factory.
  
  
 **MTBF analysis**
-The MTBF analysis and simulations will be performed for the electronic modules that we procedure and for the device itself.
+The MTBF analysis and simulations will be performed for the electronic modules that we produce and for the device itself.
  
  
 ## Manufacturing Information
