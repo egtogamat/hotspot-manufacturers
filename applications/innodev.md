@@ -99,7 +99,7 @@ We are building a Helium Light Hotspot. We are naming it TERRANIUM. Our main foc
  
 ### Current status
  
-![Figure 1. Milestones and status](http://innodev.ro/wp/terranium_img/steps.png)  
+![Figure 1. Milestones and status](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Terranium%20status.png)  
  
 **Figure 1. Milestones and status**
  
