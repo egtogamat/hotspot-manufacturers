@@ -104,6 +104,8 @@ We are building a Helium Light Hotspot. We are naming it TERRANIUM. Our main foc
 **Figure 1. Milestones and status**
  
 **Hardware design** - schematics, PCB, enclosure - **Done**
+![Figure 2 - LWTERR-MB - Top](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/LWTERR-MB%20-%20front.jpeg)![Figure 3 - LWTERR-MB - Bottom](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/LWTERR-MB%20-%20back.jpeg)
+![Figure 4 - LWTERR-MB - Top with CM4](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/LWTERR-MB%20-%20CM4.jpeg)
  
 **Firmware** - **Done**
  
@@ -125,7 +127,7 @@ We are building a Helium Light Hotspot. We are naming it TERRANIUM. Our main foc
  
  - Enclosure - **Done**
  
-![Enclosure 1](http://innodev.ro/wp/terranium_img/enc_v.jpeg) ![Enclosure 2](http://innodev.ro/wp/terranium_img/enc_h.jpeg)
+![Enclosure 1](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Terranium%20box.jpeg) ![Enclosure 2](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Case%202.jpeg)
  
 **Figure 3 - Enclosure**
  
@@ -178,7 +180,7 @@ The software is composed from the following main modules:
 -   Management interface using Django with docker
 -   The Helium configuration application (/gateway-config) to support communication with the Innodev Hotspot App
  
-![enter image description here](http://www.innodev.ro/wp/terranium_img/webapp.png)
+![FigureConfigWeb](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Internal%20WEB%20config%20app.JPG)
  
 **Figure 5 - Internal WEB configuration app**
  
