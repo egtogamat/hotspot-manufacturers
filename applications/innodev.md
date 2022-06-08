@@ -301,11 +301,7 @@ The swarm_key files are stored in the ECC chip to ensure the highest grade of se
  
 In order to mitigate the scarcity of the ECC608 chips the board is designed to accommodate 2 different ECC chips from 2 different manufacturers. The software contains drivers for both chips.
  
-The firmware is locked-down to the serial number of the raspberry-pi and to the ECC encryption key. In case of failure of the raspberry pi compute module the gateway will have to be sent in for service to generate new encryption keys.
- 
 
-Filesystem and data are encrypted (AES-256).
-The communication channels are encrypted using OpenSSL.
 Tampering attempts will be detected by measuring the right cooling liquid level and temperature of those 3 sensors.
  
  
