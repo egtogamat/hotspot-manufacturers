@@ -6,7 +6,7 @@
  
  
 Innodev is an electronic design and embedded software development company. It was founded in 2004, with large experience in M2M/IoT hardware design and software development.
-Our proposal is to build a Helium Full Gateway, specially designed for outdoor usage.
+Our proposal is to build a Helium Light Hotspot, specially designed for outdoor usage.
  
  
  
@@ -88,7 +88,7 @@ Please see below the Software and System Upgrade chapters.
  
 * What is your expected production and delivery timeline?
  
-We expect to deliver the first prototype for audit in September. Production is expected to start by August. Please see more details in  "Production and delivery timeline" chapter
+We expect to deliver the first prototype for audit in July. Production is expected to start by August. Please see more details in  "Production and delivery timeline" chapter
  
  
 Below are more details regarding our answers.
@@ -131,9 +131,6 @@ We are building a Helium Light Hotspot. We are naming it TERRANIUM. Our main foc
  
  - RF Modules mPCIe - **Done** 
  
-![Figure2 - LWTERR-RF - Bottom](http://innodev.ro/wp/terranium_img/pcb-1.jpeg)![Figure2 - LWTERR-RF - Top](http://innodev.ro/wp/terranium_img/pcb-2.jpeg)
- 
- **Figure 5 - RF modules PCB**
  
  - Enclosure - **Done**
  
@@ -289,7 +286,7 @@ Tampering will be mittigated by adding sensors to the board.
  
 * Willingness to submit a prototype for audit, and sharing those audit results publicly (pass or fail)
  
-We plan on submitting the prototype for auding in September.
+We plan on submitting the prototype for auding in July.
  
  
 Below are more details regarding our answers.
