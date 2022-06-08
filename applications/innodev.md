@@ -141,7 +141,7 @@ We are building a Helium Light Hotspot. We are naming it TERRANIUM. Our main foc
 
  **Figure 6 - Terranium packed for shipping**
 
-![Enclosure 2](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Case%202.jpeg)
+![Enclosure 2](https://github.com/egtogamat/hotspot-manufacturers/blob/main/applications/innodev/Case.jpeg)
  
 **Figure 7 - Enclosure**
  
